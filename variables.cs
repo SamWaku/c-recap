@@ -1,8 +1,8 @@
             string[] myGroceryArray = new string[2] { "Milk", "Juice"};
             Console.WriteLine(myGroceryArray[0]);
 
-            List<string> myGroceryArray2 = new List<string>();
-            myGroceryArray2.Add("Eggs");
+            // List<string> myGroceryArray2 = new List<string>(); with declaration
+            List<string> myGroceryArray2 = ["Eggs"]; //without delcaration
 
             Console.WriteLine(myGroceryArray2[0]);
             Console.WriteLine(myGroceryArray2[1]);
