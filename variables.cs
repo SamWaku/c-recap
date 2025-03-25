@@ -2,7 +2,7 @@
             Console.WriteLine(myGroceryArray[0]);
 
             // List<string> myGroceryArray2 = new List<string>(); with declaration
-            List<string> myGroceryArray2 = ["Eggs"]; //without delcaration
+            List<string> myGroceryArray2 = ["Eggs"]; //without delcaration add collections
 
             Console.WriteLine(myGroceryArray2[0]);
             Console.WriteLine(myGroceryArray2[1]);
