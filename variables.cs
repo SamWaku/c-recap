@@ -23,6 +23,9 @@
             Console.WriteLine(message);
 
 
+            // dictionaries
+            Dictionary<string, int> myDictionary = new Dictionary<string, int>(); //without collection
+
 
 
 
