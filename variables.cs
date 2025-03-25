@@ -2,10 +2,13 @@
             Console.WriteLine(myGroceryArray[0]);
 
             // List<string> myGroceryArray2 = new List<string>(); with declaration
+            // myGroceryArray2.Add("Juice");
             List<string> myGroceryArray2 = ["Eggs"]; //without delcaration add collections
 
             Console.WriteLine(myGroceryArray2[0]);
             Console.WriteLine(myGroceryArray2[1]);
+
+            IEnumerable<string> myGroceryEnumerable = myGroceryArray2;
 
 
 
