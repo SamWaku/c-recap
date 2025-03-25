@@ -15,7 +15,12 @@
             // List<string> myGroceryEnumerable2 = [.. myGroceryEnumerable]; or use collection expression
 
 
-            //mul
+            //multidimentional arrays
+            int[,] myMultidimentionalArray = {
+                { 1, 1 },
+            };
+
+            Console.WriteLine("MultidimensionalArry", myMultidimentionalArray[0,0]);
 
 
 
