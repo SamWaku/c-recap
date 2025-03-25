@@ -16,7 +16,7 @@
 
 
             //multidimentional arrays
-            int[,] myMultidimentionalArray = {
+            int[,] myMultidimentionalArray = { //the commas define the depth of the array
                 { 1, 1 },
             };
             string message = $"Multidimentiaonal Array {myMultidimentionalArray[0,0]}";
