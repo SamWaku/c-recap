@@ -8,7 +8,16 @@
             Console.WriteLine(myGroceryArray2[0]);
             Console.WriteLine(myGroceryArray2[1]);
 
+            // enumerables to work with loops
             IEnumerable<string> myGroceryEnumerable = myGroceryArray2;
+            // converting Enumerable back to string
+            List<string> myGroceryEnumerable2 = myGroceryEnumerable.ToList();
+            // List<string> myGroceryEnumerable2 = [.. myGroceryEnumerable]; or use collection expression
+
+
+            //mul
+
+
 
 
 
