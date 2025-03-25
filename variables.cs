@@ -33,6 +33,11 @@
 
 
 
+
+
+
+
+
             // Console.WriteLine("Hello World!");
 
             //// 1 byte is made up of 8 bits 00000000 - these bits can be used to store a number as follows
