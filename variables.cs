@@ -5,6 +5,7 @@
             myGroceryArray2.Add("Eggs");
 
             Console.WriteLine(myGroceryArray2[0]);
+            Console.WriteLine(myGroceryArray2[1]);
 
 
 
