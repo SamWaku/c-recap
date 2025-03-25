@@ -6,7 +6,7 @@
             List<string> myGroceryArray2 = ["Eggs"]; //without delcaration add collections
 
             Console.WriteLine(myGroceryArray2[0]);
-            Console.WriteLine(myGroceryArray2[1]);
+            // Console.WriteLine(myGroceryArray2[1]);
 
             // enumerables to work with loops
             IEnumerable<string> myGroceryEnumerable = myGroceryArray2;
@@ -19,8 +19,8 @@
             int[,] myMultidimentionalArray = {
                 { 1, 1 },
             };
-
-            Console.WriteLine("MultidimensionalArry", myMultidimentionalArray[0,0]);
+            string message = $"Multidimentiaonal Array {myMultidimentionalArray[0,0]}";
+            Console.WriteLine(message);
 
 
 
