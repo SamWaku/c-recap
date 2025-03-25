@@ -25,6 +25,9 @@
 
             // dictionaries
             Dictionary<string, int> myDictionary = new Dictionary<string, int>(); //without collection
+            myDictionary["Juice"] = 5;
+            Console.WriteLine(myDictionary["Juice"]);
+
 
 
 
