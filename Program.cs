@@ -26,6 +26,10 @@ namespace CSharpBasics
             {
                 Console.WriteLine("Equal without case sensitivity");
             }
+            else
+            {
+                Console.WriteLine("Not Equal");
+            }
         }
     }
 }
