@@ -30,6 +30,17 @@ namespace CSharpBasics
             {
                 Console.WriteLine("Not Equal");
             }
+
+
+            switch(myCar)
+            {
+                case "audi":
+                    Console.WriteLine("Lowercase");
+                case "Audi":
+                    Console.WriteLine("Uppercase");
+                default:
+                    Console.WriteLine("");
+            }
         }
     }
 }
