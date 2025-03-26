@@ -6,8 +6,15 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-            string[] myGroceryArray = new string[2] { "Milk", "Juice"};
-            Console.WriteLine(myGroceryArray[0]);
+            int myInt = 5;
+            int mySecondInt = 10;
+
+            if (myInt < mySecondInt)
+            {
+                myInt += 10;
+            }
+
+            Console.WriteLine(myInt);
 
         }
     }
