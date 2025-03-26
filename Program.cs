@@ -22,7 +22,7 @@ namespace CSharpBasics
             if(myCar == myCapitalizedCar){
                 Console.WriteLine("Equal");
             }
-            else
+            else if( myCar == myCapitalizedCar.ToLower())
             {
                 Console.WriteLine("Not Equal");
             }
