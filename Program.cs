@@ -17,7 +17,7 @@ namespace CSharpBasics
             Console.WriteLine(myInt);
 
             string myCar = "audi";
-            string myCapitalizedCar = "Audi";
+            string myCapitalizedCar = "Audi2";
 
             if(myCar == myCapitalizedCar){
                 Console.WriteLine("Equal");
