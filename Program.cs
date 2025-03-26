@@ -24,7 +24,7 @@ namespace CSharpBasics
             }
             else if( myCar == myCapitalizedCar.ToLower())
             {
-                Console.WriteLine("Not Equal");
+                Console.WriteLine("Equal without case sensitivity");
             }
         }
     }
