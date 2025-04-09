@@ -199,22 +199,31 @@ namespace CSharpBasics
         // static string name1 = "Samuel";
         // static int age = 23;
 
-        
-        public void Addition(int number1, int number2)
+        public int TripleSum(int number1, int number2 )
         {
-            
-           
-
+           if(number1 == number2)
+           {
             int sum = number1 + number2;
-            Console.WriteLine($"The sum is: {sum}");
+            int triple = sum * 3;
+            Console.WriteLine($"Value of triple: {triple}");
+           }
+           else
+           {
+            int sum = number1 + number2;
+            Console.WriteLine($"Value of normal sum: {sum}");
+           }
+            int optimized = number1 == number2 ? (number1 + number2) * 3 : number1 + number2;
+            
+           return optimized;
         }
+
     }
     
     public class Program
     {
         static void Main(string[] args)
         {
-            // calling a static method
+        // calling a static method
         //    Basics.Display();
 
         // // object as a reference of a class
@@ -259,8 +268,12 @@ namespace CSharpBasics
         // FirstLastCharacter firstLastCharacter = new FirstLastCharacter();
         // firstLastCharacter.SwapFirstLastCharacter("Samuel");
 
+        // Basics basics = new Basics();
+        // basics.Addition(2, 5);
+
         Basics basics = new Basics();
-        basics.Addition(2, 5);
+        basics.TripleSum(2,2);
+        Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
         }
     }
 }
