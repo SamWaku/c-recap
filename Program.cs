@@ -204,6 +204,7 @@ namespace CSharpBasics
            if(number1 == number2)
            {
             int sum = number1 + number2;
+            
             int triple = sum * 3;
             Console.WriteLine($"Value of triple: {triple}");
            }
@@ -216,6 +217,25 @@ namespace CSharpBasics
             
            return optimized;
         }
+
+        public string TerniaryOperators()
+        {
+            Console.WriteLine("Enter first name: ");
+            string name1 = Console.ReadLine(); 
+
+            Console.WriteLine("Enter second name: ");
+            string name2 = Console.ReadLine(); 
+
+            string response1 = "Names are the same";
+            string response2 = "Names are not the same";
+
+            Console.WriteLine($"You entered: {name1} and {name2}");
+
+            string result = name1 == name2 ? response1 : response2;
+
+            return result;
+        }
+
 
     }
     
@@ -272,8 +292,10 @@ namespace CSharpBasics
         // basics.Addition(2, 5);
 
         Basics basics = new Basics();
-        basics.TripleSum(2,2);
-        Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
+        // basics.TripleSum(2,2);
+        string result = basics.TerniaryOperators();
+        Console.WriteLine(result);
+        // Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
         }
     }
 }
