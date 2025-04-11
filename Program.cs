@@ -261,29 +261,29 @@ namespace CSharpBasics
     }
 
 
-    public interface IDrive
-{
-    //can contain bodyless methods... acts as a contract that every class that implementst it believes
-    public void Drift();
-}
-
-public interface IDance
-{
-    public void DubStep();
-}
-
-public class Sam : IDrive, IDance
-{
-    public void Drift()
+        public interface IDrive
     {
-        Console.WriteLine("I can drift!");
+        //can contain bodyless methods... acts as a contract that every class that implementst it believes
+        public void Drift();
     }
 
-    public void DubStep()
+    public interface IDance
     {
-        Console.WriteLine("I can dance");
+        public void DubStep();
     }
-}
+
+    public class Sam : IDrive, IDance
+    {
+        public void Drift()
+        {
+            Console.WriteLine("I can drift!");
+        }
+
+        public void DubStep()
+        {
+            Console.WriteLine("I can dance");
+        }
+    }
 
     public class Summation
     {
@@ -297,36 +297,39 @@ public class Sam : IDrive, IDance
 
     interface IDemension
     {
-    float GetLength();
-    float GetWidth();
+        float GetLength();
+
+        float GetWidth();
     }
-        class Box : IDemension
+
+    class Box : IDemension
     {
-        float _lengthInches;
-        float _widthInches; 
+
+        float _length;
+        float _width;
+
 
         public Box(float length, float width)
         {
-            _lengthInches = length;
-            _widthInches = width;
+            _length = length;
+            _width = width;
+        }
+        public float GetLength()
+        {
+            return _length;
         }
 
-        float IDemension.GetLength()
+        public float GetWidth()
         {
-            return _lengthInches;
+            return _width;
         }
-
-        float IDemension.GetWidth()
-        {
-            return _widthInches;
-        }
-        
     }
 
 
-    
+
+
     // Primary constructors
-    
+
     public class Program
     {
         static void Main(string[] args)
@@ -404,10 +407,15 @@ public class Sam : IDrive, IDance
         // int sum = summation.AddingTwoNumbers(2, 5);
         // Console.WriteLine(sum);
 
-        Box box = new Box(2f, 4f);
-        IDemension demension = box;
-        Console.WriteLine($"Length: {demension.GetLength()}");
-        Console.WriteLine($"Width: {demension.GetWidth()}");
+        // Box box = new Box(2f, 4f);
+        // IDemension demension = box;
+        // Console.WriteLine($"Length: {demension.GetLength()}");
+        // Console.WriteLine($"Width: {demension.GetWidth()}");
+
+        //instiatiating an implicit interface
+        Box box = new Box(2f,3f);
+        Console.WriteLine($"Length: {box.GetLength()}");
+        Console.WriteLine($"Width: {box.GetWidth()}");
         }
     }
 }

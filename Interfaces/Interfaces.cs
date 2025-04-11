@@ -71,6 +71,34 @@ public class Sam : IDrive, IDance
     
 }
 
+//An interface member that is explicitly implemented cannot be accessed from a class instance
+        interface IDemension
+        {
+            float GetLength();
+            float GetWidth();
+        }
+            class Box : IDemension
+        {
+        float _lengthInches;
+        float _widthInches; 
+
+        public Box(float length, float width)
+        {
+            _lengthInches = length;
+            _widthInches = width;
+        }
+
+        float IDemension.GetLength()
+        {
+            return _lengthInches;
+        }
+
+        float IDemension.GetWidth()
+        {
+            return _widthInches;
+        }
+        
+    }
 
 
 
