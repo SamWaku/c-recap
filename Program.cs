@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace CSharpBasics
 {
@@ -239,6 +240,93 @@ namespace CSharpBasics
 
     }
     
+    public record RecordTest(string FirstName, string LastName, string Id)
+    {
+       public readonly string Id  = Id;
+    }
+    
+    // basics
+    public class ConstructorExpressionBodyMember
+    {
+        private string? name;
+
+        public ConstructorExpressionBodyMember(string FirstName) => Name = FirstName;
+        
+            public string Name
+            {
+                get => name;
+                set => name = value;
+            }
+        
+    }
+
+
+    public interface IDrive
+{
+    //can contain bodyless methods... acts as a contract that every class that implementst it believes
+    public void Drift();
+}
+
+public interface IDance
+{
+    public void DubStep();
+}
+
+public class Sam : IDrive, IDance
+{
+    public void Drift()
+    {
+        Console.WriteLine("I can drift!");
+    }
+
+    public void DubStep()
+    {
+        Console.WriteLine("I can dance");
+    }
+}
+
+    public class Summation
+    {
+
+        public int AddingTwoNumbers(int number1, int number2)
+        {
+            int sum = number1 + number2;
+            return sum;
+        }
+    }
+
+    interface IDemension
+    {
+    float GetLength();
+    float GetWidth();
+    }
+        class Box : IDemension
+    {
+        float _lengthInches;
+        float _widthInches; 
+
+        public Box(float length, float width)
+        {
+            _lengthInches = length;
+            _widthInches = width;
+        }
+
+        float IDemension.GetLength()
+        {
+            return _lengthInches;
+        }
+
+        float IDemension.GetWidth()
+        {
+            return _widthInches;
+        }
+        
+    }
+
+
+    
+    // Primary constructors
+    
     public class Program
     {
         static void Main(string[] args)
@@ -291,11 +379,35 @@ namespace CSharpBasics
         // Basics basics = new Basics();
         // basics.Addition(2, 5);
 
-        Basics basics = new Basics();
+        // Basics basics = new Basics();
         // basics.TripleSum(2,2);
-        string result = basics.TerniaryOperators();
-        Console.WriteLine(result);
+        // string result = basics.TerniaryOperators();
+        // Console.WriteLine(result);
         // Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
+
+        /*records*/
+        // RecordTest recordTest = new RecordTest("Samuel", "Wakumelo", "123");
+        // Console.WriteLine(recordTest.Id);
+
+        /*primary constructors*/
+        // PrimaryContructorClass<int> primaryContructorClass  = new PrimaryContructorClass<int>("My Box") {Contents = 123};
+        // Console.WriteLine($"{primaryContructorClass.Contents} + {primaryContructorClass.Label}");
+
+        // Sam sam = new Sam();
+        // IDance dance = sam;
+        // IDrive drive = sam;
+        
+        // dance.DubStep();
+        // drive.Drift();
+
+        // Summation summation = new Summation();
+        // int sum = summation.AddingTwoNumbers(2, 5);
+        // Console.WriteLine(sum);
+
+        Box box = new Box(2f, 4f);
+        IDemension demension = box;
+        Console.WriteLine($"Length: {demension.GetLength()}");
+        Console.WriteLine($"Width: {demension.GetWidth()}");
         }
     }
 }
