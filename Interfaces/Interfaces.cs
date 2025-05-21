@@ -100,6 +100,36 @@ public class Sam : IDrive, IDance
         
     }
 
+    interface IDemensionImplict
+    {
+        float GetLength();
+
+        float GetWidth();
+    }
+
+    class BoxImplicit : IDemension
+    {
+
+        float _length;
+        float _width;
+
+
+        public BoxImplicit(float length, float width)
+        {
+            _length = length;
+            _width = width;
+        }
+        public float GetLength()
+        {
+            return _length;
+        }
+
+        public float GetWidth()
+        {
+            return _width;
+        }
+    }
+
 
 
 

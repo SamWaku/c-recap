@@ -260,13 +260,11 @@ namespace CSharpBasics
         
     }
 
-
-        public interface IDrive
+    public interface IDrive
     {
         //can contain bodyless methods... acts as a contract that every class that implementst it believes
         public void Drift();
     }
-
     public interface IDance
     {
         public void DubStep();
@@ -285,6 +283,85 @@ namespace CSharpBasics
         }
     }
 
+    public class Car : IDrive
+    {
+        //store car
+        public void StoreCar()
+        {
+            Console.WriteLine("Car has been added!");
+        }
+
+        //view car
+        public void ViewCar()
+        {
+            Console.WriteLine("Can view car");
+        }
+
+        //delete car
+        public void DeleteCar()
+        {
+            Console.WriteLine("Delete car!");
+        }
+
+        public void Drift()
+        {
+            Console.WriteLine("Drifted sideways");
+        }
+    }
+    public interface ICook
+    {
+        //Things "I" can cook
+        public void Nshima();
+        public void Pasta();
+        public void Goat();
+        public void Rice();
+        public string Beef();
+        public void Chicken();
+        public void Pork();
+    }
+    public class Pumulo : ICook
+    {
+        public string ReturnBeef(string? word)
+        {
+            Console.ReadLine();
+            return word;
+        }
+
+        public string Beef()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Chicken()
+        {
+            Console.WriteLine("I can cook Chicken");
+        }
+
+        public void Goat()
+        {
+            Console.WriteLine("I can cook Goat Meat");
+        }
+
+        public void Nshima()
+        {
+            Console.WriteLine("I can cook Nshima");
+        }
+
+        public void Pasta()
+        {
+            Console.WriteLine("I can cook Pasta");
+        }
+
+        public void Pork()
+        {
+            Console.WriteLine("I can cook Pork");
+        }
+
+        public void Rice()
+        {
+            Console.WriteLine("I can cook Rice");
+        }
+    }
     public class Summation
     {
 
@@ -295,37 +372,25 @@ namespace CSharpBasics
         }
     }
 
-    interface IDemension
+    public class DelegateMethodClass
     {
-        float GetLength();
+        public delegate void Callback(string message);
 
-        float GetWidth();
+        public string  DelegateMethod(string message)
+        {
+            return message;
+        }
+
+        public  void MethodWithCallback(string message, Callback callback)
+        {
+            callback("The word of the day is: " + message);
+        }  
     }
 
-    class Box : IDemension
+    public class DateTimeConversion
     {
 
-        float _length;
-        float _width;
-
-
-        public Box(float length, float width)
-        {
-            _length = length;
-            _width = width;
-        }
-        public float GetLength()
-        {
-            return _length;
-        }
-
-        public float GetWidth()
-        {
-            return _width;
-        }
     }
-
-
 
 
     // Primary constructors
@@ -334,88 +399,122 @@ namespace CSharpBasics
     {
         static void Main(string[] args)
         {
-        // calling a static method
-        //    Basics.Display();
+            // calling a static method
+            //    Basics.Display();
 
-        // // object as a reference of a class
-        // Basics basics= new Basics();
+            // // object as a reference of a class
+            // Basics basics= new Basics();
 
-        // //new object referenceing the previous object
-        // Basics basics1 = basics;
-        // basics.Display();
+            // //new object referenceing the previous object
+            // Basics basics1 = basics;
+            // basics.Display();
 
-        // Container container= new Container();
-        // Console.WriteLine(container._capacity);
+            // Container container= new Container();
+            // Console.WriteLine(container._capacity);
 
-        // Person person= new Person(){
-        //     FirstName = "Samuel",
-        //     LastName = "Wakumelo"
-        //    };
+            // Person person= new Person(){
+            //     FirstName = "Samuel",
+            //     LastName = "Wakumelo"
+            //    };
 
-        //    Console.WriteLine($"{person.FirstName}, {person.LastName}"); //why cant you pass to arguments here
-        
-        // //Condtionals
-        // Conditionals conditionals= new Conditionals();
-        // conditionals.FinalCondition(10);
-        // Console.WriteLine($"Conditional Age: {Conditionals.age}");
+            //    Console.WriteLine($"{person.FirstName}, {person.LastName}"); //why cant you pass to arguments here
 
-        // OddOrEven oddOrEven = new OddOrEven();
-        // oddOrEven.DetermineOddOrEven();
+            // //Condtionals
+            // Conditionals conditionals= new Conditionals();
+            // conditionals.FinalCondition(10);
+            // Console.WriteLine($"Conditional Age: {Conditionals.age}");
 
-        // Weather.DisplayWeather();
+            // OddOrEven oddOrEven = new OddOrEven();
+            // oddOrEven.DetermineOddOrEven();
+
+            // Weather.DisplayWeather();
 
 
-        // WeatherLoop.ForEachLoop();         
-        // WeatherLoop.ForLoop();
-        // WeatherLoop whileloop = new WeatherLoop();
-        // whileloop.WhileLoop();
+            // WeatherLoop.ForEachLoop();         
+            // WeatherLoop.ForLoop();
+            // WeatherLoop whileloop = new WeatherLoop();
+            // whileloop.WhileLoop();
 
-        // WeatherLoop dowhileloop = new WeatherLoop();
-        // dowhileloop.DoWhileLoop();
+            // WeatherLoop dowhileloop = new WeatherLoop();
+            // dowhileloop.DoWhileLoop();
 
-        // SwapNumbers swapNumbers = new SwapNumbers();
-        // swapNumbers.SwapTwoNumbers(3,4);
-       
-        // FirstLastCharacter firstLastCharacter = new FirstLastCharacter();
-        // firstLastCharacter.SwapFirstLastCharacter("Samuel");
+            // SwapNumbers swapNumbers = new SwapNumbers();
+            // swapNumbers.SwapTwoNumbers(3,4);
 
-        // Basics basics = new Basics();
-        // basics.Addition(2, 5);
+            // FirstLastCharacter firstLastCharacter = new FirstLastCharacter();
+            // firstLastCharacter.SwapFirstLastCharacter("Samuel");
 
-        // Basics basics = new Basics();
-        // basics.TripleSum(2,2);
-        // string result = basics.TerniaryOperators();
-        // Console.WriteLine(result);
-        // Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
+            // Basics basics = new Basics();
+            // basics.Addition(2, 5);
 
-        /*records*/
-        // RecordTest recordTest = new RecordTest("Samuel", "Wakumelo", "123");
-        // Console.WriteLine(recordTest.Id);
+            // Basics basics = new Basics();
+            // basics.TripleSum(2,2);
+            // string result = basics.TerniaryOperators();
+            // Console.WriteLine(result);
+            // Console.WriteLine($"Optimized {basics.TripleSum(3,4)}");
 
-        /*primary constructors*/
-        // PrimaryContructorClass<int> primaryContructorClass  = new PrimaryContructorClass<int>("My Box") {Contents = 123};
-        // Console.WriteLine($"{primaryContructorClass.Contents} + {primaryContructorClass.Label}");
+            /*records*/
+            // RecordTest recordTest = new RecordTest("Samuel", "Wakumelo", "123");
+            // Console.WriteLine(recordTest.Id);
 
-        // Sam sam = new Sam();
-        // IDance dance = sam;
-        // IDrive drive = sam;
-        
-        // dance.DubStep();
-        // drive.Drift();
+            /*primary constructors*/
+            // PrimaryContructorClass<int> primaryContructorClass  = new PrimaryContructorClass<int>("My Box") {Contents = 123};
+            // Console.WriteLine($"{primaryContructorClass.Contents} + {primaryContructorClass.Label}");
 
-        // Summation summation = new Summation();
-        // int sum = summation.AddingTwoNumbers(2, 5);
-        // Console.WriteLine(sum);
+            // Sam sam = new Sam();
+            // IDance dance = sam;
+            // IDrive drive = sam;
 
-        // Box box = new Box(2f, 4f);
-        // IDemension demension = box;
-        // Console.WriteLine($"Length: {demension.GetLength()}");
-        // Console.WriteLine($"Width: {demension.GetWidth()}");
+            // dance.DubStep();
+            // drive.Drift();
 
-        //instiatiating an implicit interface
-        Box box = new Box(2f,3f);
-        Console.WriteLine($"Length: {box.GetLength()}");
-        Console.WriteLine($"Width: {box.GetWidth()}");
+            // Summation summation = new Summation();
+            // int sum = summation.AddingTwoNumbers(2, 5);
+            // Console.WriteLine(sum);
+
+            // Box box = new Box(2f, 4f);
+            // IDemension demension = box;
+            // Console.WriteLine($"Length: {demension.GetLength()}");
+            // Console.WriteLine($"Width: {demension.GetWidth()}");
+
+            //instiatiating an implicit interface
+            // Box box = new Box(2f,3f);
+            // Console.WriteLine($"Length: {box.GetLength()}");
+            // Console.WriteLine($"Width: {box.GetWidth()}");
+            // DelegateMethodClass delegateMethodClass = new DelegateMethodClass();
+            // static void MyCallback(string msg)
+            // {
+            //     Console.WriteLine(msg);
+            // }
+
+            // var response = new DelegateMethodClass();
+            // response.MethodWithCallback("hi", MyCallback);
+            // Random random = new Random();
+            // random.Next();
+
+            // DateTime todaysYear = DateTime.UtcNow;
+
+
+            // DateTime utcTime1 = new DateTime(DateTime.UtcNow.Year, 5, 15, 0, 0, 0);
+            // utcTime1 = DateTime.SpecifyKind(utcTime1, DateTimeKind.Utc);
+            // DateTimeOffset utcTime2 = utcTime1;
+            // Console.WriteLine($"Converted: {utcTime1} {utcTime1.Kind} to a DateTimeOffset value of {utcTime2}");
+            // }
+
+            // Car car = new Car();
+            // car.StoreCar();
+            // car.ViewCar();
+            // car.DeleteCar();
+            // car.Drift();
+            Pumulo pumulo = new Pumulo();
+            pumulo.Nshima();
+            pumulo.Chicken();
+            pumulo.Beef();
+            pumulo.Pasta();
+            pumulo.Rice();
+            pumulo.Goat();
+            pumulo.Pork();
+            pumulo.ReturnBeef("Hello");
         }
     }
 }
