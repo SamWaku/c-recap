@@ -414,7 +414,7 @@ namespace CSharpBasics
 
     public static class ReflClass
     {
-        public static void Foo2(StringBuilder fooSB)
+        public static void Foo2(ref StringBuilder fooSB)
         {
             fooSB.Append("test");
             fooSB = null;
