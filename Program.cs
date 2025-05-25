@@ -412,6 +412,20 @@ namespace CSharpBasics
         }
     }
 
+    public static class ReflClass
+    {
+        public static void Foo2(StringBuilder fooSB)
+        {
+            fooSB.Append("test");
+            fooSB = null;
+        }
+        public static void Foo(ref int p)
+        {
+            p = p + 1;
+            Console.WriteLine(p);
+        }
+    }
+
     // Primary constructors
     public class Program
     {
@@ -543,7 +557,7 @@ namespace CSharpBasics
             Console.WriteLine(sb.ToString());
 
             //ref modifier
-            
+
         }
     }
 }
