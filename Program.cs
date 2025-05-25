@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Runtime.InteropServices;
+using System.Text;
 
 namespace CSharpBasics
 {
@@ -399,10 +400,15 @@ namespace CSharpBasics
 
     public static class NormalClass
     {
+        public static void Foo2(StringBuilder fooSB)
+        {
+            fooSB.Append("test");
+            fooSB = null;
+        }
         public static void Foo(int p)
         {
             p = p + 1;
-            Console.WriteLine (p);
+            Console.WriteLine(p);
         }
     }
 
@@ -531,6 +537,13 @@ namespace CSharpBasics
             int x = 8;
             NormalClass.Foo(x);
             Console.WriteLine(x);
+
+            StringBuilder sb = new StringBuilder();
+            NormalClass.Foo2(sb);
+            Console.WriteLine(sb.ToString());
+
+            //ref modifier
+            
         }
     }
 }
