@@ -557,7 +557,9 @@ namespace CSharpBasics
             Console.WriteLine(sb.ToString());
 
             //ref modifier
-
+            int xref = 8;
+            ReflClass.Foo(ref xref);
+            Console.WriteLine(xref);
         }
     }
 }
