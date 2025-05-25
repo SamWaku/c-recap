@@ -398,6 +398,15 @@ namespace CSharpBasics
     //     static ref
     // }
 
+    public class SwapGeneric
+    {
+        static void Swap(ref string a, ref string b)
+        {
+            string temp = a;
+            a = b;
+            b = temp;
+        }
+    }
 
     // Primary constructors
     public class Program
