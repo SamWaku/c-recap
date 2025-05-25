@@ -560,6 +560,10 @@ namespace CSharpBasics
             int xref = 8;
             ReflClass.Foo(ref xref);
             Console.WriteLine(xref);
+
+            StringBuilder sbref = new StringBuilder();
+            NormalClass.Foo2(sbref);
+            Console.WriteLine(sbref.ToString());
         }
     }
 }
