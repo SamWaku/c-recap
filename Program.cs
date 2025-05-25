@@ -400,7 +400,7 @@ namespace CSharpBasics
 
     public class SwapGeneric
     {
-        static void Swap(ref string a, ref string b)
+        public static void Swap(ref string a, ref string b)
         {
             string temp = a;
             a = b;
@@ -529,6 +529,12 @@ namespace CSharpBasics
             // pumulo.Goat();
             // pumulo.Pork();
             // pumulo.ReturnBeef("Hello");
+
+            string x = "Samuel";
+            string y = "Wakumelo";
+
+            SwapGeneric.Swap(ref x, ref y);
+            Console.WriteLine(x + y);
         }
     }
 }
