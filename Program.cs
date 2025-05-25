@@ -244,7 +244,6 @@ namespace CSharpBasics
     {
        public readonly string Id  = Id;
     }
-    
     // basics
     public class ConstructorExpressionBodyMember
     {
@@ -392,9 +391,22 @@ namespace CSharpBasics
 
     }
 
+    // public static class RefClass
+    // {
+    //     static string x = "Old Value";
+    //     static ref
+    // }
+
+    public static class NormalClass
+    {
+        public static void Foo(int p)
+        {
+            p = p + 1;
+            Console.WriteLine (p);
+        }
+    }
 
     // Primary constructors
-
     public class Program
     {
         static void Main(string[] args)
@@ -506,15 +518,19 @@ namespace CSharpBasics
             // car.ViewCar();
             // car.DeleteCar();
             // car.Drift();
-            Pumulo pumulo = new Pumulo();
-            pumulo.Nshima();
-            pumulo.Chicken();
-            pumulo.Beef();
-            pumulo.Pasta();
-            pumulo.Rice();
-            pumulo.Goat();
-            pumulo.Pork();
-            pumulo.ReturnBeef("Hello");
+            // Pumulo pumulo = new Pumulo();
+            // pumulo.Nshima();
+            // pumulo.Chicken();
+            // pumulo.Beef();
+            // pumulo.Pasta();
+            // pumulo.Rice();
+            // pumulo.Goat();
+            // pumulo.Pork();
+            // pumulo.ReturnBeef("Hello");
+
+            int x = 8;
+            NormalClass.Foo(x);
+            Console.WriteLine(x);
         }
     }
 }
