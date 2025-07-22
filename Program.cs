@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -414,6 +415,24 @@ namespace CSharpBasics
         IEnumerable GetEnumerable();
     }
 
+public class TestEnumeration
+{
+    public string Word = "Hello";
+
+    public void Enumerate()
+    {
+        IEnumerator rator = Word.GetEnumerator();
+
+        while (rator.MoveNext())
+        {
+            char c = (char)rator.Current;
+            Console.Write(c + ".");
+        }
+
+        Console.WriteLine(); 
+    }
+}
+
     public class Program
     {
         static void Main(string[] args)
@@ -540,6 +559,9 @@ namespace CSharpBasics
 
             // SwapGeneric.Swap(ref x, ref y);
             // Console.WriteLine(x + y);
+
+            TestEnumeration testEnumeration = new TestEnumeration();
+            testEnumeration.Enumerate();
         }
     }
 }
