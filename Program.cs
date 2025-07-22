@@ -423,13 +423,18 @@ public class TestEnumeration
     {
         IEnumerator rator = Word.GetEnumerator();
 
-        while (rator.MoveNext())
+            // while (rator.MoveNext())
+            // {
+            //     char c = (char)rator.Current;
+            //     Console.Write(c + ".");
+            // }
+        
+        foreach (char c in Word)
         {
-            char c = (char)rator.Current;
-            Console.Write(c + ".");
+                Console.Write(c + ".");
         }
 
-        Console.WriteLine(); 
+        // Console.WriteLine(); 
     }
 }
 
