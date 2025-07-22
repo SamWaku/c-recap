@@ -408,7 +408,12 @@ namespace CSharpBasics
         }
     }
 
-    // Primary constructors
+    // Primary constructors - declared at the  top level declaration of a class, the are like a class with parameters
+    public interface IEnumerable
+    {
+        IEnumerable GetEnumerable();
+    }
+
     public class Program
     {
         static void Main(string[] args)
@@ -530,11 +535,11 @@ namespace CSharpBasics
             // pumulo.Pork();
             // pumulo.ReturnBeef("Hello");
 
-            string x = "Samuel";
-            string y = "Wakumelo";
+            // string x = "Samuel";
+            // string y = "Wakumelo";
 
-            SwapGeneric.Swap(ref x, ref y);
-            Console.WriteLine(x + y);
+            // SwapGeneric.Swap(ref x, ref y);
+            // Console.WriteLine(x + y);
         }
     }
 }
