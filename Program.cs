@@ -441,9 +441,11 @@ public class TestEnumeration
 public class DelegateDemo{
     delegate int Transformer(int x)
 
-    int Square(int x){
+    public int Square(int x){
         return X * X;
     }
+
+    Transformer transformer = new Transformer()
 }
 
     public class Program
@@ -577,6 +579,12 @@ public class DelegateDemo{
             // testEnumeration.Enumerate();
 
             delegate int Transformer(int x)
-        }
-    }
+
+            int Square(int x){
+                return X * X;
+            }
+
+            Transformer t = Square;
+
+            
 }
