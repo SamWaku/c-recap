@@ -438,6 +438,14 @@ public class TestEnumeration
     }
 }
 
+public class DelegateDemo{
+    delegate int Transformer(int x)
+
+    int Square(int x){
+        return X * X;
+    }
+}
+
     public class Program
     {
         static void Main(string[] args)
@@ -565,8 +573,10 @@ public class TestEnumeration
             // SwapGeneric.Swap(ref x, ref y);
             // Console.WriteLine(x + y);
 
-            TestEnumeration testEnumeration = new TestEnumeration();
-            testEnumeration.Enumerate();
+            // TestEnumeration testEnumeration = new TestEnumeration();
+            // testEnumeration.Enumerate();
+
+            delegate int Transformer(int x)
         }
     }
 }
